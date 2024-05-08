@@ -11,6 +11,8 @@
         * {
             padding: 0;
             margin: 0;
+            cursor: default;
+            scroll-behavior: smooth;
         }
 
         ::-webkit-scrollbar {
@@ -88,6 +90,42 @@
             align-items: center;
             justify-content: center;
         }
+
+        .links {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            padding: 20px 0 0 20px;
+            gap: 20px;
+        }
+
+        .links button {
+            outline: none;
+            border: none;
+            width: 30px;
+            height: 30px;
+            background: transparent;
+
+            a {
+                text-decoration: none;
+                color: #000000;
+                padding: 10px;
+                width: inherit;
+                height: inherit;
+                font-size: 1rem;
+                border-radius: 10px;
+                background: #ddd;
+                cursor: pointer;
+
+                strong {
+                    cursor: pointer;
+                }
+            }
+        }
         
         h1 {
             font-size: 2rem;
@@ -113,9 +151,17 @@
     <div class="container">
 
         <div class="box">
-            <div class="revolucao_box primeira">
+            <div class="revolucao_box primeira" id="primeira">
             </div>
             <div class="content" style="--color: #494949;">
+                <div class="links">
+                    <button type="button">
+                        <a href="#quarta"><strong>\/</strong></a>
+                    </button>
+                    <button type="button">
+                        <a href="#segunda">\/</a>
+                    </button>
+                </div>
                 <h1>1ª Revolução Industrial</h1>
                 <p>
                     A Primeira Revolução Industrial foi iniciada na Inglaterra, em meados dos anos 1760, até por volta de 1850, marcando a industrialização mundial. 
@@ -130,9 +176,17 @@
         </div>
 
         <div class="box">
-            <div class="revolucao_box segunda">
+            <div class="revolucao_box segunda"  id="segunda">
             </div>
             <div class="content" style="--color: #a87b26;">
+                <div class="links">
+                    <button type="button">
+                        <a href="#primeira">/\</a>
+                    </button>
+                    <button type="button">
+                        <a href="#terceira">\/</a>
+                    </button>
+                </div>
                 <h1>2ª Revolução Industrial</h1>
                 <p>
                     A Segunda Revolução Industrial aconteceu entre meados do século XIX e a primeira metade do século XX até o início da Segunda Guerra Mundial.
@@ -148,9 +202,17 @@
         </div>
 
         <div class="box">
-            <div class="revolucao_box terceira">
+            <div class="revolucao_box terceira"   id="terceira">
             </div>
             <div class="content" style="--color: #1f6a8d;">
+                <div class="links">
+                    <button type="button">
+                        <a href="#segunda">/\</a>
+                    </button>
+                    <button type="button">
+                        <a href="#quarta">\/</a>
+                    </button>
+                </div>
                 <h1>3ª Revolução Industrial</h1>
                 <p>
                     A Inglaterra foi a pioneira do desenvolvimento industrial por ser a nação que possuía as condições mínimas necessárias para desencadear esse processo.
@@ -166,9 +228,17 @@
         </div>
 
         <div class="box"> 
-            <div class="revolucao_box quarta">
+            <div class="revolucao_box quarta"   id="quarta">
             </div>
             <div class="content" style="--color: #b9b9b9;">
+                <div class="links">
+                    <button type="button">
+                        <a href="#primeira"><strong>/\</strong></a>
+                    </button>
+                    <button type="button">
+                        <a href="#terceira">/\</a>
+                    </button>
+                </div>
                 <h1>4ª Revolução Industrial</h1>
             </div>        
         </div>
