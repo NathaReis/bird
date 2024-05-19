@@ -19,7 +19,7 @@ IMAGENS_PASSARO = [
 ]
 
 pygame.font.init()
-FONTE_PONTOS = pygame.font.SysFont('arial', 50)
+FONTE_PONTOS = pygame.font.SysFont('arial', 25)
 
 
 class Passaro:
@@ -30,7 +30,7 @@ class Passaro:
     TEMPO_ANIMACAO = 5
 
     def __init__(self, x, y):
-        self.x = x
+        self.x = x - 100
         self.y = y
         self.angulo = 0
         self.velocidade = 0
@@ -99,7 +99,7 @@ class Passaro:
 
 class Cano:
     DISTANCIA = 200
-    VELOCIDADE = 5
+    VELOCIDADE = 10
 
     def __init__(self, x):
         self.x = x
