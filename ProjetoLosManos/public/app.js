@@ -10,7 +10,7 @@ let timeDom = document.querySelector('.carousel .time');
 
 thumbnailBorderDom.appendChild(thumbnailItemsDom[0]);
 let timeRunning = 3000;
-let timeAutoNext = 7000;
+let timeAutoNext = 7;
 
 nextDom.onclick = function(){
     showSlider('next');    
@@ -20,9 +20,9 @@ prevDom.onclick = function(){
     showSlider('prev');    
 }
 let runTimeOut;
-let runNextAuto = setTimeout(() => {
-    next.click();
-}, timeAutoNext)
+// let runNextAuto = setTimeout(() => {
+//     next.click();
+// }, timeAutoNext)
 function showSlider(type){
     let  SliderItemsDom = SliderDom.querySelectorAll('.carousel .list .item');
     let thumbnailItemsDom = document.querySelectorAll('.carousel .thumbnail .item');
@@ -43,9 +43,9 @@ function showSlider(type){
     }, timeRunning);
 
     clearTimeout(runNextAuto);
-    runNextAuto = setTimeout(() => {
-        next.click();
-    }, timeAutoNext)
+    // runNextAuto = setTimeout(() => {
+    //     next.click();
+    // }, timeAutoNext)
 }
 
 const locale = (link) => {
